@@ -1,6 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <p>
-        hello there
-    </p>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+</head>
+<body>
+
+<h1>Credit Card Fraud Detection</h1>
+
+<h2>Introduction / Background</h2>
+<p>
+    Credit card fraud is a significant issue in the financial sector, leading to substantial financial losses. Fraudulent activities, such as card cloning, identity theft, and unauthorized transactions are common challenges for credit card companies. To combat this, many institutions use machine learning to detect unusual transaction patterns and flag potential fraud.
+</p>
+
+<h3>Past Cases / Literature Review</h3>
+<ul>
+    <li><strong>Maniraj et al.</strong>: At SRM Institute, assistant professor S.P. Maniraj built a very similar model to what we are aiming to do. His team’s model was able to successfully identify new transactions as fraudulent or not with an accuracy of 99.7% [1].</li>
+    <li><strong>Safa and Ganga</strong>: They created a model that heavily utilized logistic regression to analyze distorted credit card data. The logistic regression method had a 99.07% accuracy [2].</li>
+</ul>
+
+<h3>Dataset Description</h3>
+<p>
+    We plan to use publicly available datasets like the <strong>Kaggle Credit Card Fraud Detection Dataset</strong>, which contains real credit card transactions with fraudulent transactions. This dataset contains transactions from September 2013 by Europeans. This data is spanned over 2 days, where there are 492 frauds out of 284,807 transactions [3]. There are only numerical input variables such as time between the first transaction and current transaction.
+</p>
+<p><strong>Dataset Link:</strong> <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud">Kaggle Credit Card Fraud Dataset</a></p>
+
+<h2>Problem Definition</h2>
+
+<h3>Problem</h3>
+<p>
+    The challenge is to detect fraudulent transactions using both supervised methods (classification) and unsupervised methods (anomaly detection) to identify patterns that indicate fraud.
+</p>
+
+<h3>Motivation</h3>
+<p>
+    The motivation behind creating a machine learning model to detect credit card fraud stems from the desire to protect consumers and financial institutions from significant financial losses. As online transactions and digital payments increase, so does the risk of fraud. This offers a more adaptive approach, learning from patterns in transactional data to detect suspicious activity in real-time, reducing false positives, and enhancing security without compromising user experience.
+</p>
+
+<h2>Methods</h2>
+
+<h3>Preprocessing</h3>
+<ul>
+    <li><strong>Data Cleaning:</strong> Check for missing values and adjust the data accordingly, identify and remove any outliers that may be skewing the data.</li>
+    <li><strong>Scaling:</strong> Normalization to ensure everything is on the same scale.</li>
+    <li><strong>Converting Categorical Values:</strong> Convert categorical features into numerical columns, make sure to label numerical features where order matters.</li>
+</ul>
+
+<h3>Machine Learning Models</h3>
+<ul>
+    <li><strong>Supervised Learning:</strong> Logistic regression, Random Forest, or Gradient Boosting Classifiers
